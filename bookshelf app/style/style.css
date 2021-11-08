@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500&family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: #F8F3D4;
+    font-family: Manrope , sans-serif;
+}
+
+.heading_bar {
+    padding: 12px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Yellowtail , sans-serif;
+    background-color: #00B8A9;
+    color: white;
+}
+
+.heading_bar img { 
+    margin-right: 20px;
+}
+
+
+main{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+.input_form { 
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background-color: #FFDE7D;
+    margin-top: 30px;
+}
+
+.input_form > h2 { 
+    text-align: center;
+    border: 2px solid rgb(0, 184, 169);
+    background-color: #00B8A9;
+    border-radius: 10px;
+    padding: 5px;
+    color: white;
+    font-family: Yellowtail , sans-serif;
+}
+
+.input_form > form > .input_class {
+    margin: 8px 0;
+}
+
+.input_form > form > .input_class > input { 
+    display: block;
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.input_form > form > .input_class_radio {
+    margin: 12px 0;
+    display: flex;
+    align-items: center;
+}
+
+.input_form > form > .input_class_radio > #bookOnProgress { 
+    margin-left: 20px;
+}
+
+
+.input_form > form > button { 
+    padding: 7px 20px;
+    background-color: #00B8A9;
+    border-color: #00B8A9;
+    border-radius: 10px;
+    color: white;
+    font-family: YellowTail , sans-serif;
+    cursor: pointer;
+}
+
+/*Search Book Section*/
+.search_book {
+    margin: 16px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    background-color: #FFDE7D;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.search_head { 
+    display: flex;
+    justify-content: center;
+    border: 2px solid rgb(0, 184, 169);
+    background-color: #00B8A9;
+    border-radius: 10px;
+    color: white;
+    margin-bottom: 10px;
+    padding: 5px;
+    font-family: Yellowtail , sans-serif;
+    width: 100%;
+}
+
+
+.search_book > form {
+    padding: 16px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr 0.3fr;
+    grid-gap: 10px;
+    font-size: 1.5em;
+}
+
+.search_book > form > input { 
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.search_button {
+    display: flex;
+    flex-direction: row;
+}
+
+.search_book > form > .search_button > button { 
+    background-color: #00B8A9;
+    border-color: #00B8A9;
+    padding: 5px 25px;
+    border-radius: 10px;
+    color: white;
+    font-family: YellowTail , sans-serif;
+    cursor: pointer;
+}
+
+#resetButton { 
+    margin-left: 5px;
+}
+
+
+
+
+/* Book Shelf Section*/
+
+.book_shelf {
+    margin: 16px 0 0 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: #FFDE7D;
+    padding: 16px;
+    border-radius: 10px;
+}
+
+
+.book_shelf > h2 { 
+    border: 2px solid rgb(0, 184, 169);
+    background-color: #00B8A9;
+    border-radius: 10px;
+    padding: 5px;
+    color: white;
+    font-family: Yellowtail , sans-serif;
+}
+
+
+.book_shelf > .book_list {
+    padding: 16px;
+}
+
+
+.book_shelf > .book_list > .book_item {
+    padding: 8px 16px 16px 16px;
+    background-color: #F8F3D4;
+    color: black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.book_shelf > .book_list > .book_item > button{
+    border: 0;
+    padding: 5px;
+    margin: 5px 5px 0 0;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+
+.complete_button { 
+    background-color: #00B8A9;
+    color: white;
+}
+
+.complete_button:hover { 
+    background-color: darkgreen;
+}
+
+.remove_button { 
+    background-color: #F6416C;
+    color: white;
+    margin-left: 15px;
+}
+
+.remove_button:hover { 
+    background-color: darkred;
+}
+
+.undo_button {
+    background-color: #00B8A9;
+    color: white;
+}
+
+.undo_button:hover { 
+    background-color: darkgreen;
+}
+
+
+
+.main_custom_dialog{
+    display: none;
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+
+
+.custom_dialog  {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    margin: 15px;
+    left: 36%;
+    top: 25%;
+    width: 400px;
+    height: 150px;
+    padding: 10px 10px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4;
+}
+
+
+
+@-webkit-keyframes animatetop{
+    from {top:-300px; opacity:0} 
+    to {top:25%; opacity:1}
+}
+  
+@keyframes animatetop{
+    from {top:-300px; opacity:0}
+    to {top:25%; opacity:1}
+}
+
+.dialog_button > button { 
+    margin-top: 10px;
+    padding: 5px 15px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#confirm { 
+    background-color:rgb(0, 184, 169);
+}
+
+#confirm:hover { 
+    background-color: green;
+}
+
+
+#cancel { 
+    background-color:#F6416C;
+}
+
+#cancel:hover { 
+    background-color: darkred;
+}
+
+
+
+

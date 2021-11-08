@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>BookShelf App</title>
+        <link rel="stylesheet" href="style/style.css">
+    </head>
+    <body>
+        <header class="heading_bar">
+            <img src="https://img.icons8.com/external-vitaliy-gorbachev-lineal-vitaly-gorbachev/60/ffffff/external-book-back-to-school-vitaliy-gorbachev-lineal-vitaly-gorbachev.png" width="40px" height="40px"/>
+            <h1>Julius BookShelf</h1>
+        </header>
+        <main>
+            <div id="myDialog" class="main_custom_dialog">
+                <div class="custom_dialog">
+                    <div class="dialog_header">
+                        <h3>Are You Sure?</h3>
+                    </div>
+                    <div class="dialog_desc">
+                        <p>Once Remove it the book cannot be recover</p>
+                    </div>
+                    <div class="dialog_button">
+                        <button id="confirm">Confirm</button>
+                        <button id="cancel">Cancel</button>
+                    </div>
+                </div>
+            </div>
+            <section class="input_form">
+                <h2>Input Reading Book</h2>
+                <form id="inputBook">
+                    <div class="input_class">
+                        <label for="inputBookTitle">Book Title</label>
+                        <input id="inputBookTitle" type="text" required>
+                    </div>
+                    <div class="input_class">
+                        <label for="inputBookAuthor">Author</label>
+                        <input id="inputBookAuthor" type="text" maxlength="30" required>
+                        <p id="authorCorrect" hidden></p> 
+                    </div>
+                    <div class="input_class">
+                        <label for="inputBookYear">Released Year</label>
+                        <input id="inputBookYear" type="number" min="1500" max="2099" required>
+                    </div>
+                    <div class="input_class_radio">
+                        <input type="radio" id="bookCompleted" class="bookStatus" name="book_status" value="Completed" required>
+                        <label for="html">Completed</label><br>
+                        <input type="radio" id="bookOnProgress" class="bookStatus" name="book_status" value="OnProgress" required>
+                        <label for="bookOnProgress">On Progress</label><br>
+                    </div>
+                    <button id="bookSubmit" type="submit">Submit The Book</button>
+                </form> 
+            </section>
+
+            <section class="search_book">
+                <div class="search_head">
+                    <img src="https://img.icons8.com/material-rounded/96/ffffff/search.png" width="30px" height="30px"/>
+                    <h2>Find The book</h2>
+                </div>
+                <form id="searchBook">
+                    <label for="searchBookTitle">Title</label>
+                    <input id="searchBookTitle" type="text">
+                    <div class="search_button">
+                        <button id="searchSubmit" type="submit">Search</button>
+                        <button id="resetButton" type="reset">Resets</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="book_shelf">
+                <h2>On Progress Book</h2>
+        
+                <div id="onProgressBookList" class="book_list">
+                    <!-- OnProgress Book Container Item -->
+                </div>
+            </section>
+        
+            <section class="book_shelf">
+                <h2>Completed Books</h2>
+        
+                <div id="completeBookshelfList" class="book_list">
+                    <!-- Completed Book Container Item -->
+                </div>
+            </section>
+        </main>
+        <script src="script/data.js"></script>
+        <script src="script/script.js"></script>
+        <script src="script/main.js"></script>
+    </body>
+</html>
